@@ -1,0 +1,16 @@
+@import "../../../../styles/variables.scss";
+
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $hamburger-bar-width;
+  height: $hamburger-bar-height;
+  border-radius: $hamburger-border-radius;
+
+  svg {
+    font-size: $hamburger-font-size;
+    color: $hamburger-color;
+  }
+}

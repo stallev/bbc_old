@@ -1,0 +1,20 @@
+@import "../../../../../styles/variables.scss";
+@import "../../../../../styles/placeholders.scss";
+
+.custom-link {
+  display: inline-block;
+  transition: all ease 0.3s;
+  cursor: pointer;
+
+  &--nav-link {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: $color-orange;
+    }
+  }
+
+  &--primary a {
+    @extend %primaryBtnLink;
+  }
+}

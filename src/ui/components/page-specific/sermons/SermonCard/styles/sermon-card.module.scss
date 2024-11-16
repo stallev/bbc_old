@@ -1,0 +1,101 @@
+@import '../../../../../../styles/variables.scss';
+
+.sermon-card {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+
+  @media screen and (min-width: $smallDesktop) {
+    width: 260px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 250px;
+  }
+
+  @media screen and (min-width: $largeDesktop) {
+    width: 296px;
+  }
+
+  &--active {
+    .sermon-card__info {
+      background: hsla(33, 100%, 53%, 1);
+      background: linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%);
+    }
+  }
+
+  &__image-wrap {
+    position: relative;
+    height: 400px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__start {
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+    left: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: hsla(33, 100%, 53%, 1);
+    background: linear-gradient(90deg, hsla(33, 100%, 53%, 1) 0%, hsla(58, 100%, 68%, 1) 100%);
+    cursor: pointer;
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: $gutter-sm;
+    flex-grow: 2;
+    padding: $gutter-ms $gutter-ms;
+    background-color: $color-light-backgrond-gray;
+  }
+
+  &__title {
+    color: $color-black;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-md;
+    line-height: $line-height-lg;
+  }
+
+  &__text-data {
+    display: flex;
+    flex-direction: column;
+    row-gap: $gutter-sm;
+    flex-grow: 2;
+  }
+
+  &__preacher {
+    font-weight: $font-weight-bold;
+  }
+
+  &__source-data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter-sm;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-default;
+    line-height: $line-height-ms;
+    padding-right: $gutter-xl;
+    margin-top: auto;
+  }
+
+  &__video-link {
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+    display: inline-block;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
