@@ -15,11 +15,13 @@ interface SubscribeFormInput {
 }
 
 interface SubscribeFormProps {
+  API_URL: string
   title?: string
   description?: string
 }
 
 const SubscribeForm:React.FC<SubscribeFormProps> = ({
+  API_URL,
   title,
   description,
 }) => {
@@ -40,7 +42,7 @@ const SubscribeForm:React.FC<SubscribeFormProps> = ({
 
     try {
       const response = await fetch(
-        '/api/subscribe-event',
+        API_URL,
         {
           method: 'POST',
           headers: {
